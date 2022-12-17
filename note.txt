@@ -1,0 +1,820 @@
+Bash Shell Scripting:
+
+
+Computer:
+    Bare Metal or Hard Ware 
+      RAM
+      CPU 
+      ROM 
+      MOUSE
+      KEYBOARD
+    software component 
+      operating system = OS
+      other softwares :
+         shell 
+         Sublime 
+         Microsoft word/Excell 
+
+IT / Computer Usage / Management:
+  GUI = Graphical User Interface
+         pros: simple and easy undertand 
+         cons: security lapses 
+               Time consuming
+  CLI = Command Line Interface
+        pros: Automation is easy
+              Security level is high
+              Very fast and save time
+              Detect errors faster
+              log messages
+              work on virtual computers
+              flexibity, fast and efficient, set command in text form 
+              multiple users
+        cons: complex, CASE sensitive, not user friendly, hidden costs
+
+Operating systems OS:
+  windows 
+      windows 10, 11 home edition / Professional
+      windows server = 2012 / 2016 /2019
+      powershell = MS-DOS command
+
+  MacOS:
+  Chrome:
+  Linux: Runs on GUI and CLI
+
+
+==========================================
+BASH SHELL SCRIPTING:
+
+Client: Oxdit
+
+seperators:
+  &&  / ; / ;;
+
+
+What is bash shell Scripting:
+  BSS = is a collections of command in a file.
+
+
+  shell = interpreters
+  1000101111010101010101010
+
+  typs of shell:
+  sh
+  bash
+  csh
+  ksh
+  tsh
+
+
+  default shell in linux:
+    sh   = Bourne Shell
+    bash = Bourne again Shell
+
+    To know the shell you are using: echo $SHELL
+
+Shell naming convention:
+  shell-script
+
+  <filename>.sh   or   sc 
+  hello.sh  
+  hello.sc
+  hello
+
+  java-code: 
+   hello.java
+  python:
+    hello.py
+  text-file:
+    hello.txt
+  html:
+    hello.html
+
+
+Example1:
+echo hello
+whoami
+echo The Lord is Good
+echo "Welcome to ACADA"
+date
+
+sudo yum install csh -y
+
+shebang: =  #!/bin/bash
+
+#!/bin/bash
+echo hello Engineer
+echo "Welcome to Scripting"
+echo 'This is the first shell scripting lecture'
+echo 'Todays date is'
+date
+echo "Scripting is very easy"
+
+
+#!/bin/bash
+date
+ls
+pwd
+whoami
+echo thanks
+mkdir efe
+ls
+pwd
+
+
+IQ: 
+  How do you resolve an issue in a script.
+  * vi into the file and edit.
+  * cat the file to go through it 
+  * debugging mode ( -x ) or set the debug mode in the file
+  * redirect the error to another file
+
+
+date
+ls
+pwd
+set -x
+whoami
+Pwd
+echo thanks
+#mkdir efe
+set +x
+ls
+
+
+package Management:
+#!/bin/bash
+echo "Installing Applications"
+echo Instal k - shell
+sudo yum install ksh 
+echo install git
+sudo yum install git 
+
+
+comments:
+Two types of comments.
+  *Single line         = # 
+  *multiline comment   
+
+    <<good
+
+    good
+
+
+#Authur: Efe
+#Please note this script can only be executed in linux
+#Please assume sudo right for the user before executing the script
+echo "Installing Applications"
+<<oop
+echo Instal k - shell
+sudo yum install ksh 
+echo install git
+#Installing git as sudo
+sudo yum install git 
+oop
+sudo 
+echo "End of line"
+
+groovy script comment:
+  // = single line
+
+  */    
+     = multi-line
+  /*
+
+  Scripting or automation langauges:
+    1. Bash shell scripting
+    2. Python
+    3. Groovy   - Jenkins
+    4. Rudy
+    5. yaml     - K8s, Ansible, cloudformation
+    6. JSON   
+    7. HCL      - Terraform
+    8. XML      - html
+    9. Go & Golang 
+
+
+#!/bin/bash
+#Author: Efe J.
+#Date : Oct. 2022
+#This script display info about DevOps
+#This script installs packages in linux sever.
+echo "single-line comment starts"
+echo "DevOps is good"
+date
+echo "Oxdit Miles" 
+
+echo "Multi-line comment starts"
+<<boy
+  press "i" to enter insert mode
+  press esc key to enter command mode
+  press ":wq" to save and quit
+boy
+echo "Multi-line comment ends"
+
+uses of script:
+* Monitor servers 
+* user Management
+* file Management
+* package Management
+* export SSH-keys
+* Deploy Applications
+* automate tasks
+* reuse the code
+* debug
+
+
+===================================
+
+01 Nov 2022:
+
+Varaibles:
+  is a character string we use to assign a value
+  and its stores values in key value pairs
+
+   school=ACADALEarning
+   name=Efe
+   study="DevOps Master Program"
+
+   HOSTNAME=ip-172-31-24-3.ec2.internal
+
+
+            ip-172-31-24-3.ec2.internal
+
+
+  Types of Variables in Linux:
+  * System Defined Varaibles:
+    Comes predefined by the OS 
+    echo $SHELL=/bin/bash
+    echo $USER
+    echo $PWD
+
+    env = environmental varibales
+
+How to modify system defind variables:
+  *for a single user
+vi .bashrc
+export HISTSIZE=1000
+source .bashrc
+
+*for all users
+ vi /etc/profile
+ export HISTSIZE=1000
+ source /etc/profile
+
+  * User Defined Varaibles: (lowercases recommended)
+
+
+#!/bin/bash
+# This Script is teaching us how to define varaibles
+# Using variable as a place holder
+# Use variable to reduce lines of code
+# Call variable using $variablename or ${variablename}
+
+name=Efe
+school=ACADALearning
+class=DevOpsMasterClass
+echo $name
+echo $school
+echo $class
+echo ${name}
+echo ${school}
+echo ${class}
+echo I am studying $class in $school and my teacher is $name
+
+
+hardcode
+
+#!/bi#!/bin/bash
+echo "Welcome to ACADA learning"
+echo "Please enter your name"
+read answer
+echo Hello $answer, is this correct?
+read answer2
+echo "Thank you for signing up"
+
+
+#!/bi#!/bin/bash
+echo "Welcome to RBC self service"
+echo "Please slot in your card"
+echo please enter your pin
+read pin
+echo "The pin you entered is $pin"
+echo "is this correct?"
+read answer
+echo "login successfull"
+
+
+
+school="ACADA Learning"
+course=DevOpsMasterProgram
+
+echo "I am studying DevOps in $school"
+echo I am studying $course in $school
+echo "I'm studying Devops in $school"
+echo DevOps
+echo 'DevOps'
+echo "DevOps"
+
+
+var6.sh
+#!/bin/bash
+<<ss
+You need to be root user or have sudo access to execute this script
+This scrip will onlu run on linux OS
+ss
+
+echo "Creating a new user in linux"
+echo Enter username
+read username
+echo Enter Password
+read -s password
+sudo adduser $username
+echo $password | sudo passwd $username --stdin
+tail -2 /etc/passwd
+
+
+
+
+
+sudo adduser Jennifer
+
+sudo adduser $username
+
+
+standard input    =  stdin
+standard output   =  stdout
+standard error    =  stderr
+
+
+
+Assigment:
+  * Rewrite the var6.sh script
+  * write a script to touch a file, copy the file,
+    then change the ownership of the file to another user
+
+Command Line Arguments:
+
+sh dbbackup.sh  stop   restart  Efe    Dev    acada
+     $0          $1     $2       $3    $4      $5
+
+
+
+echo $#    = no of Arguments
+echo $$    = Process ID
+echo $10   = tenth Arguments
+echo ${10} = 10th Arguments
+echo $0    = display the scriptname / and shell
+echo $*    = displays all the Arguments
+echo $?    = display the status of the last run commmand
+           = if $? = 0 the last run command was successfull"
+           = if $? = 1 or = 127 that last run command was not successfull"
+
+
+pwd
+echo $0
+echo $1
+echo $2
+echo $3
+echo $8
+Date
+echo $?
+
+
+
+
+if (( $# == 3 ))
+then
+#Number of arguments on the command line
+echo '$#:' $#
+echo '$$:' $$
+echo '$3:' $3
+echo '${10}:' ${10}
+echo '$0:' $0
+echo '$*:' $*
+echo '$@:' $@
+date
+echo '$?:' $?
+else
+echo "Please Pass 3 command line arguments along with the script"
+fi
+
+
+arithemtic_Operation
+expr 6 + 2
+expr 6 - 3
+expr 6 / 2
+expr 6 \* 3
+
+redirect standard output: = 1
+
+sh test.sh 1><filename>
+
+sh test.sh 1>log
+
+#!/bin/bash
+echo what is 6 + 5 : `expr 6 + 5`
+echo What is 6 - 5 : `expr 6 - 5`
+echo What is 6 / 2 : `expr 6 / 2`
+echo What is 10 \* 2 : `expr 10 \* 2`
+echo What is todays date : `date`
+echo What is todays date
+Date
+
+
+sh test.sh 2>error
+standard Error: = 2
+#!/bin/bash
+echo what is 6 + 5 : `expr 6 + 5`
+echo What is 6 - 5 : `expr 6 - 5`
+echo What is 6 / 2 : `expr 6 / 2`
+echo What is 10 \* 2 : `expr 10 \* 2`
+echo What is todays date : `date`
+echo What is todays date
+Date
+
+
+echo Welcome to ACADA Bank
+echo Please enter your name
+read name
+echo Enter your First number
+read num1
+echo Enter your second Number
+read num2
+echo enter your third number 
+read num3
+echo Hello $name The sum of the numbers you entered is : `expr $num1 + $num2 + $num3`
+
+echo Welcome to ACADA Learning
+read -p "Please Enter your name :" name
+read -p "Enter your first installment payment :" first
+echo "Enter your second installment payment :" 
+read second 
+echo "Enter your third installment payment :"
+read third
+echo "Hello $name your balance is :" `expr 3000 - $first + $second + $third`
+
+
+echo -n "Enter your username: "
+read username
+echo -n "enter your password"
+read password
+adduser "$username"
+echo "$password" | passwd $username --stdin
+
+Dayo is smiling
+
+
+-----------------------------
+
+CONDITIONS:
+
+a=5
+b=4
+
+a==b
+a!=b
+
+-----------------
+
+-eq     ==    equal to 
+              [ a -eq b ]  or [ a == b ]
+
+-ne     ==    not equal to
+              [ a -ne b ]  or [ a != b ]
+
+-gt     ==    greater than
+              [ a -gt b ]  or [ a > b ]
+
+-lt     ==    less than
+              [ a -lt b ]  or [ a < b ]
+
+-ge     ==    greater than or equal to 
+              [ a -ge b ] or [ a >= b ]
+
+-le     ==    less than or equal to 
+              [ a -le b ]  or [ a <= b ]
+
+
+
+if else statement:
+
+syntax for if statement:
+
+if 
+then
+command or statement
+else
+command or statement
+fi
+
+if statement:
+a=10
+b=20
+if [ $a == $b ]
+then
+echo 'The value is not the same'
+echo 'Login not successfull'
+fi
+
+password='admin123'
+echo 'Please enter your pin'
+read pin
+if [ $pin == $password ]
+then 
+echo 'login successfull'
+fi
+
+else statement:
+echo 'Welcome to ACADA Bank'
+echo 'Please Enter your card for identification'
+read -p "Please enter your pin for authentication :" pin
+
+if [ $pin == 1234 ]
+then
+echo 'Login successfull'
+echo "Permitted to perform transaction"
+else
+echo "Sorry you entered the wrong pin"
+echo 'you cannot continue your transaction'
+fi
+
+
+echo "Please Enter a number"
+read num1
+echo "Please Enter another Number"
+read num2
+if [ $num1 == $num2 ]
+then 
+echo "$num1 is equal to $num2"
+fi
+
+
+echo "Please enter the price of Mangoes"
+read price1
+echo "Please enter the price of Oranges"
+read price2
+
+if [ $price1 == $price2 ]
+then 
+echo "$price1 is equal to $price2"
+else
+echo Mangoes and Oranges sells for different prices
+fi
+
+
+
+
+b <= 100; b = expr $b+1
+b = 1
+
+echo $b
+
+$b = 1
+$b = 1 + 1 = 2
+$b = 2 + 1 = 3
+$b = 3 + 1 = 4
+$b = 4 + 1 = 5
+
+
+Load testing
+load Balancing
+
+e-fintech (Paypal)
+           customers
+
+c <=50000; c=expr $c + 5000
+
+
+examples of Loops:
+  for-loops:
+
+c/c++/java:
+
+for (Initiation;condition;inc/dec)
+{
+  write statement/commad
+}
+
+
+shell Script:
+  for (( Initiation;condition;inc/dec ))
+  do
+  command/statement
+  done
+
+
+
+echo "for-loop start"
+for (( a=1;a<=5;a++))    == a++ is the same as a+1
+do
+echo $a
+done
+
+a++  == expr a + 1
+
+a = 1
+a = 1 + 1 = 2
+a = 2 + 1 = 3
+a = 3 + 1 = 4 
+a = 4 + 1 = 5
+a = 5 + 1 = 6  * 
+
+
+echo "For-Loop starts"
+for (( a=1;a<=5;a++ ))
+do
+echo $a
+done
+echo "For-Loop ends"
+
+
+# Number of online bankers request = r = request count
+echo Request Count
+for (( r=1000;r<=10000;r=r+2000 ))
+do 
+echo $r
+done
+echo "For-Loop ends"
+
+
+for (( i=98;i<=100;i++ ))
+do
+        echo $i
+done
+
+
+Assigment:
+Write a shell script to print numbers from 100 to 1 using for loop
+
+
+
+a = 1000
+a = 1000 + 2000 = 3000
+a = 3000
+open 
+close
+
+if [jhddkfj]
+then
+echo 
+if [ thsirsl]
+then
+echo 
+if [ thsirsl]
+then
+echo 
+fi
+fi
+if [ thsirsl]
+then
+echo 
+fi
+else 
+statement
+fi
+
+
+while-loop:
+c/c++/java
+
+initiation
+while [ condition ]
+
+
+shell script:
+
+initiation
+while [ condition ]
+do 
+commands/statements
+done
+
+
+echo "While Loop Starts"
+i=1
+while [ $i -le 5 ]
+do
+echo $i
+i=`expr $i + 1`
+done
+echo "While-loop end"
+
+
+
+echo "Performing load test"
+echo "Load testing starts"
+rc=5000
+while [ $rc -le 20000 ]
+do 
+echo $rc
+rc=`expr $rc + 5000`
+done
+echo 'load-testing completed'
+
+
+
+
+
+managing multiline conditions:
+  switch case
+
+examples: 
+  service httpd start|stop|enable|restart|status|disable
+
+case $1 in
+option1)
+commands/statements;;
+option2)
+commands/statements;;
+option3)
+commands/statements;;
+option4)
+commands/statements;;
+*)
+commands/statements;;
+esac
+
+
+
+
+echo 'switch case demo start'
+
+case $1 in
+start)
+echo 'Starting SonarQube server'
+echo 'SonarQube Server Started';;
+stop)
+echo 'Stoping SonarQube Server'
+echo 'SonarQube Server stopped';;
+enable)
+echo "Enabling SonarQube server"
+echo 'SonarQube server enabled';;
+*)
+echo 'You passed the wrong option'
+echo "The Options are: start | stop | enable";;
+esac
+echo 'End of switch case'
+
+
+Assignment:
+*write a switch case script to take values from 1 to 5
+*explain your experience in bash shell scripting.
+
+
+functions:
+
+fn()
+{
+  statements/commands
+}
+fn
+
+
+or :
+
+greet()
+{
+  statements/commands
+}
+greet
+
+
+
+
+devops engineer
+platform engineer
+SRE
+solution achitect
+systems engineer
+
+
+
+
+
+
+
+
+
+Quick setup — if you’ve done this kind of thing before
+ Set up in Desktop	or	
+HTTPS
+SSH
+	
+Get started by creating a new file or uploading an existing file. We recommend every repository include a README, LICENSE, and .gitignore.
+…or create a new repository on the command line
+ echo "# Transformer" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/odidia/Transformer.git
+git push -u origin main
+…or push an existing repository from the command line
+ git remote add origin https://github.com/odidia/Transformer.git
+git branch -M main
+git push -u origin main
+…or import code from another repository
+You can initialize this repository with code from a Subversion, Mercurial, or TFS project.
+
+Import code
+
